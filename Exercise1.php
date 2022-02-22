@@ -15,9 +15,9 @@ USE TYPEHINTING EVERYWHERE!
 */
 class Beverage
 {
-    public string $color;
-    public float $price;
-    public string $temperature;
+    protected string $color;
+    protected float $price;
+    protected string $temperature;
 
     public function __construct(string $color, float $price, string $temperature = "cold")
     {
@@ -37,6 +37,4 @@ class Beverage
 }
 
 $cola = new Beverage("black", 2.0) ;
-$cola -> getInfo();
-
-echo "<br>". $cola -> temperature;
+$cola -> getInfo() ;
