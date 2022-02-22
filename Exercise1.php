@@ -19,11 +19,14 @@ class Beverage
     public float $price;
     public string $temperature;
 
-    public function __construct(string $color, float $price, string $temperature)
+    public function __construct(string $color, float $price, string $temperature = "cold")
     {
         $this-> color = $color;
         $this-> price = $price;
-        $this-> temperature = "cold";
+        $this-> temperature = $temperature;
+        if ($this -> temperature == "") {
+            $this -> temperature = 'cold';
+        }
     }
     
     public function getInfo() 
@@ -33,7 +36,7 @@ class Beverage
 
 }
 
-$cola = new Beverage("black", 2.0, "cold") ;
+$cola = new Beverage("black", 2.0) ;
 $cola -> getInfo();
 
 echo "<br>". $cola -> temperature;
