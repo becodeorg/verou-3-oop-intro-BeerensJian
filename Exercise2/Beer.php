@@ -29,7 +29,15 @@ class Beer extends Beverage
 
     public function showPercentage()
     {
-       echo $this->alcoholPercentage;
+       echo $this -> alcoholPercentage;
+    }
+    public function getPrice()
+    {
+        return $this -> price;
+    }
+    public function getTemp()
+    {
+        return $this ->temperature;
     }
 }
 
@@ -37,13 +45,13 @@ $cara = new Beer("yellow", 2, "lauw", "carapills", 4.5);
 
 $cara->showPercentage();
 echo $cara ->name . "<br>";
-echo $cara -> price . "<br>" . "<br>";
+echo $cara -> getPrice() . "<br>" . "<br>";
 
 $duvel = new Beer("Blonde", 3.5, "", "Duvel", 8.5);
 
 $duvel -> showPercentage() ;
 echo "<br>" . $duvel -> alcoholPercentage . "<br>";
-echo $duvel -> temperature . "<br>";
+echo $duvel -> getTemp() . "<br>";
 $duvel -> getInfo();
 /*
 
